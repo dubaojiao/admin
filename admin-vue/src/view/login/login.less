@@ -1,0 +1,74 @@
+
+//重写登录
+.des-login{
+    width:100%;
+    height:100%;
+    background: url("./img/91.jpg");
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective:1000px;
+    .login-box{
+        transition: transform .5s cubic-bezier(0.68, -0.25, 0.265, 0.85);
+        transform-origin:bottom;
+        transform: rotateX(0deg) translateX(100px);
+        width:320px;
+        height:420px;
+        padding:10px;
+        background:#fff;
+        display: flex;
+        justify-content: center;
+        .logo-img{
+            position: absolute;
+            left:0px;
+            top:-40px;
+            width:100%;
+            img{
+                width:80px;
+                height:80px;
+                display: block;
+                margin:0 auto;
+                border-radius: 50%;
+                border:4px solid #fff;
+            }
+        }
+    }
+    .loading-login{
+        width:200px;
+        height:130px;
+        margin-left:20px;
+        margin-top:100px;
+        .loading-login-info{
+             display: none;
+             background:#fff;
+             width:100%;
+             height:100%;
+             align-items: center;
+             justify-content: center;
+             flex-direction: column;
+             span{
+                 font-size:14px;
+                 color:#000;
+                 display: block;
+                 text-align: center;
+             }
+        }
+    }
+}
+.activeLogin{
+    .modal{
+        position: fixed;
+        left:0px;
+        top:0px;
+        width:100%;
+        height:100%;
+        z-index: 200;
+    }
+    .login-box{
+        transform: rotateX(50deg) translateX(0px)!important;
+    }
+    .loading-login .loading-login-info{
+        display: flex;
+    }
+}
